@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+        <div style="color:chocolate">
+            This is First DIV
+        </div>
+        <div class="item" style="color:blueviolet">
+            This is Second DIV
+            <p>
+                <span id="mylable" style="color:green;">Hello Everyone</span>
+            </p>
+        </div>
+    <input type="button" id="btnChange" value="Change Color"/>
+<script>
+    $(document).ready(function () {
+
+        //select HTML element by element type
+        var allDIV = $("div");
+
+        //select HTML element by class
+        var itemclass = $(".item");
+
+        //select HTML element by id
+        var mylabel = $("#mylabel");
+
+
+
+        $("#btnChange").click(function () {
+
+            allDIV.css("color", "blue");
+            allDIV.css("font-size", "large");
+
+            itemclass.css("color", "Brown");
+            itemclass.css("font-size", "large");
+
+            $("#mylable").text("Hi Everyone");
+
+        });
+
+    }); 
+
+</script>
+</body>
+</html>
